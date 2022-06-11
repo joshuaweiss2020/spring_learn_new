@@ -6,11 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring_MVC_XML" />
+        <module name="spring_MVC" />
+      </profile>
+      <profile name="Annotation profile for prj_1" enabled="true">
+        <sourceOutputDir name="springall/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="springall/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="spring_learn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring_learn" target="1.8" />
+      <module name="prj_1" target="1.8" />
+      <module name="spring_mvc" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

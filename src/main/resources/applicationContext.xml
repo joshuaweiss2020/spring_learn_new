@@ -3,14 +3,21 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="stu" class="com.joshua.spring.Student">
-      <property name="name" value="Alex"></property>
-      <property name="age" value="10"></property>
-      <property name="school" ref="school"></property>
-  </bean>
+    <bean id = "school" class="com.joshua.spring3.School">
+        <!--name 与 address是构造方法的参数名称，而不是成员变量名-->
+        <constructor-arg name="name" value="交通大学"></constructor-arg>
+        <constructor-arg name="address" value="上海"></constructor-arg>
+    </bean>
 
-   <bean id="school" class="com.joshua.spring2.School">
-       <property name="name" value="武汉大学"></property>
-        <property name="address" value="武汉"></property>
-   </bean>
+    <bean id="stu" class="com.joshua.spring3.Student">
+        <constructor-arg index="0" value="Joshua"></constructor-arg>
+        <constructor-arg index="2" ref="school"></constructor-arg>
+        <constructor-arg index="1" value="40"></constructor-arg>
+    </bean>
+
+    <bean id="stuSeq" class="com.joshua.spring3.Student">
+        <constructor-arg value="ICE"></constructor-arg>
+        <constructor-arg value="30"></constructor-arg>
+        <constructor-arg ref="school"></constructor-arg>
+    </bean>
 </beans>
